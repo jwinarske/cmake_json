@@ -174,7 +174,8 @@
         {
             "name": "ZLIB",
             "url": "https://github.com/luxonis/zlib/archive/refs/tags/v1.2.11-p2.tar.gz",
-            "sha1sum": "fb8b6486183b13a86040f793a939b128f6d27095"
+            "sha1sum": "fb8b6486183b13a86040f793a939b128f6d27095",
+            "cmake_args": "-DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/staging/usr/"
         }
     ]
 }
