@@ -144,7 +144,7 @@
             "name": "libusb-luxonis",
             "url": "https://github.com/luxonis/libusb/archive/b7e4548958325b18feb73977163ad44398099534.tar.gz",
             "sha1sum": "2d79573d57628fe56d2868d2f6ce756d40906cf4",
-            "cmake_args": "-DWITH_UDEV=OFF -DBUILD_SHARED_LIBS=ON"
+            "cmake_args": "-DBUILD_SHARED_LIBS=ON"
         },
         {
             "name": "nlohmann_json",
