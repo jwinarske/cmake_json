@@ -1,0 +1,180 @@
+{
+    "bootloader_version": "0.0.24",
+    "device_side_commit": "8c3d6ac1c77b0bf7f9ea6fd4d962af37663d2fbd",
+    "artifactory_url": "https://artifacts.luxonis.com/artifactory",
+    "artifacts": {
+        "resources": [
+            {
+                "name": "depthai-device-fwp",
+                "url": "${ARTIFACTORY_URL}/luxonis-myriad-snapshot-local/depthai-device-side/${DEPTHAI_DEVICE_SIDE_COMMIT}/depthai-device-fwp-${DEPTHAI_DEVICE_SIDE_COMMIT}.tar.xz",
+                "sha256sum": "7b036b9ab1b5c20d37dffd4977ccbe1c43b54dbf770a2abbcdcfd3d4ffdf04b1"
+            },
+            {
+                "name": "depthai-bootloader-fwp",
+                "url": "${ARTIFACTORY_URL}/luxonis-myriad-release-local/depthai-bootloader/${DEPTHAI_BOOTLOADER_VERSION}/depthai-bootloader-fwp-${DEPTHAI_BOOTLOADER_VERSION}.tar.xz",
+                "sha256sum": "c913c636c86652ea96eda2135a517620f7d528d6357ddc697edfa20762a7cb30"
+            }
+        ],
+        "examples": [
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/mobilenet-ssd_openvino_2021.4_6shave.blob",
+                "sha256sum": "5ae9cb636bfa40df02c2ca3e64bc68a6690abd8a147903d4580aea6b6feb9c1c"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/yolo-v3-tiny-tf_openvino_2021.4_6shave.blob",
+                "sha256sum": "f2729a42e277e994ba68f0e914b66fe52ce665175a80a5596b8d50d18b220343"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/yolo-v4-tiny-tf_openvino_2021.4_6shave.blob",
+                "sha256sum": "0229c068ff220631affd323b84eece865bfe28d5fe8950ab602825a8444b86f4"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/mobilenet-ssd_openvino_2021.4_5shave.blob",
+                "sha256sum": "782d80902c5ce7da01f8fc83894b68da33216edc93d94afb16dd7576a25e50e2"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/mobilenet-ssd_openvino_2021.4_8shave.blob",
+                "sha256sum": "8c9a0189d95580b2442c88539af3198a433efd41b9b0837cea8d09a4d16a2d4a"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/construction_vest.mp4",
+                "sha256sum": "2f35ea35a41e98ee17dc9136c495ed0ff3aa7ba6774d5eedc2b9935350c6084f"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/misc/depthai_calib.json",
+                "sha256sum": "f27dc05a57d2d964189e459599b1633556dc647e67a3b7e3eb7fe1b00740f157"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/misc/depthai_v5.calib",
+                "sha256sum": "c258902222d7b9ec55eee56b1b39255f9a3bb55c02eb8c5228f5a251c70740ee"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/misc/BW1098OBC.json",
+                "sha256sum": "fed667afd54e97b4918f1118788ae14acd6461ac6364850e32686ce111fa4528"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/person-detection-retail-0013_openvino_2021.4_7shave.blob",
+                "sha256sum": "4a5d7ef7c27ddbae51a3bfe20b093006f44b3b6329c8d5f6482f9f348b21ad37"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/concat_openvino_2021.4_6shave.blob",
+                "sha256sum": "6ac3023ea8dac9b7501ead0f9b2c2a4495d2791a58b7049de065246455cf87be"
+            },
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/normalize_openvino_2021.4_4shave.blob",
+                "sha256sum": "9b5dc4b375ed9218c2910284556f8152cbfcc0130e7b7a42d9a9991eae8be23a"
+            }
+        ],
+        "tests": [
+            {
+                "url": "${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/mobilenet-ssd_openvino_2021.2_8shave.blob",
+                "sha256sum": "e0c60156ee97b01ac115ad838d13c8d90559064fec04c6d423bb03fdc40524eb"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2020.3_4shave.blob",
+                "sha256sum": "681fb8532c5b9e39f40b4332f3ed5cede454305d3993b711bec4bb31f448993a"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2020.4_4shave.blob",
+                "sha256sum": "840800c8cc043a43352f3a5438ec35c477de19e6daf32d99d4cbcf4542949a37"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2021.1_4shave.blob",
+                "sha256sum": "9550a3b76a8a7e987d1d2881399aa84ed671ec7d6225ac20a2cd7acf9471f034"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2021.2_4shave.blob",
+                "sha256sum": "b0f88c76cfa4a4158614f654b6da1b4600137fd89df07e9f73cb8893146a4b5e"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2021.3_4shave.blob",
+                "sha256sum": "6e563fe1f0da4d1f813acffb16050c4ab53baa98d8818514639036e156b2857f"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2021.4.2_4shave.blob",
+                "sha256sum": "5c83cb3ce7d5a29357a975e5df3cd1163741a133695c7904cd4408e33f07f1bc"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/text-image-super-resolution-0001_2022.1.0_4shave.blob",
+                "sha256sum": "3a4ec484d2890835adb239c06ae1f22b1141c02cc70bd2661b7f9e37703a23ee"
+            },
+            {
+                "url":"${ARTIFACTORY_URL}/luxonis-depthai-data-local/network/yolo-v4-tiny-tf_openvino_2021.4_4shave.blob",
+                "sha256sum": "68e9fc04971f602038457505f7d90f3db81e0bf6f73bfa0e1fed5486ec6ffcc3"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "name": "Backward",
+            "url": "https://github.com/bombela/backward-cpp/archive/refs/tags/v1.6.tar.gz",
+            "sha1sum": "4ecb711eabfd15bc88ff9dd9342907fc5da46b62",
+            "cmake_args": "-DBACKWARD_TESTS=OFF"
+        },
+        {
+            "name": "BZip2",
+            "url": "https://github.com/cpp-pm/bzip2/archive/v1.0.8-p0.tar.gz",
+            "sha1sum": "9125bd674fbe7c8169c8ea6a2a15a414a7dc2f86"
+        },
+        {
+            "name": "psimd",
+            "url": "https://github.com/Maratyszcza/psimd/archive/072586a71b55b7f8c584153d223e95687148a900.tar.gz",
+            "sha1sum": "531ef739b029f75b5641e04739476d977ddf4c75"
+        },
+        {
+            "name": "FP16",
+            "url": "https://github.com/luxonis/FP16/archive/c911175d2717e562976e606c6e5f799bf40cf94e.tar.gz",
+            "sha1sum": "40e9723c87c2fe21781132c0f2f8b90338500e32",
+            "cmake_args": "-DFP16_BUILD_BENCHMARKS=OFF -DFP16_BUILD_TESTS=OFF -DPSIMD_SOURCE_DIR=${CMAKE_CURRENT_BINARY_DIR}/psimd-prefix/src/psimd",
+            "dependencies": "psimd"
+        },
+        {
+            "name": "libarchive-luxonis",
+            "url": "https://github.com/luxonis/libarchive/archive/45baa3a3e57104519e1165bcd5ac29c3bd8c9f3a.tar.gz",
+            "sha1sum": "ca5cd0f1c31b9c187d7119cb1aa7467f8c231d29",
+            "cmake_args": "-DENABLE_ACL=OFF -DENABLE_BZip2=OFF -DENABLE_CAT=OFF -DENABLE_CAT_SHARED=OFF -DENABLE_CNG=OFF -DENABLE_COVERAGE=OFF -DENABLE_CPIO=OFF -DENABLE_CPIO_SHARED=OFF -DENABLE_EXPAT=OFF -DENABLE_ICONV=OFF -DENABLE_INSTALL=ON -DENABLE_LIBB2=OFF -DENABLE_LIBXML2=OFF -DENABLE_LZ4=OFF -DENABLE_LZMA=ON -DENABLE_LZO=OFF -DENABLE_LibGCC=OFF -DENABLE_MBEDTLS=OFF -DENABLE_NETTLE=OFF -DENABLE_OPENSSL=OFF -DENABLE_PCREPOSIX=OFF -DENABLE_SAFESEH=AUTO -DENABLE_TAR=OFF -DENABLE_TAR_SHARED=OFF -DENABLE_TEST=OFF -DENABLE_WERROR=OFF -DENABLE_XATTR=OFF -DENABLE_ZLIB=OFF -DENABLE_ZSTD=OFF",
+            "dependencies": "BZip2"
+        },
+        {
+            "name": "libnop-luxonis",
+            "url": "https://github.com/luxonis/libnop/archive/ab842f51dc2eb13916dc98417c2186b78320ed10.tar.gz",
+            "sha1sum": "32f40f084615ba7940ce9d29f05f3294371aabeb"
+        },
+        {
+            "name": "libusb-luxonis",
+            "url": "https://github.com/luxonis/libusb/archive/b7e4548958325b18feb73977163ad44398099534.tar.gz",
+            "sha1sum": "2d79573d57628fe56d2868d2f6ce756d40906cf4",
+            "cmake_args": "-DWITH_UDEV=OFF -DBUILD_SHARED_LIBS=ON"
+        },
+        {
+            "name": "nlohmann_json",
+            "url": "https://github.com/nlohmann/json/archive/v3.9.1.tar.gz",
+            "sha1sum": "f8a20a7e19227906d77de0ede97468fbcfea03e7",
+            "cmake_args": "-DJSON_BuildTests=OFF"
+        },
+        {
+            "name": "XLink",
+            "url": "https://github.com/luxonis/XLink/archive/1ef2f960eec66540891434c9a3341c11e66e4360.tar.gz",
+            "sha1sum": "23641bb9ae698d0e016abcce349094a38577838b",
+            "cmake_args": "-DHUNTER_ENABLED=OFF -DXLINK_LIBUSB_SYSTEM=ON -DCMAKE_CXX_FLAGS=-I${CMAKE_CURRENT_BINARY_DIR}/staging/usr/include",
+            "dependencies": "libusb-luxonis"
+        },
+        {
+            "name": "spdlog",
+            "url": "https://github.com/gabime/spdlog/archive/v1.8.2.tar.gz",
+            "sha1sum": "4437f350ca7fa89a0cd8faca1198afb36823f775",
+            "cmake_args": "-DSPDLOG_BUILD_EXAMPLE=OFF -DSPDLOG_FMT_EXTERNAL=OFF -DCMAKE_CXX_VISIBILITY_PRESET=hidden -DCMAKE_C_VISIBILITY_PRESET=hidden"
+        },
+        {
+            "name": "Catch2",
+            "url": "https://github.com/catchorg/Catch2/archive/refs/tags/v2.13.7.tar.gz",
+            "sha1sum": "fa8f14ccf852413d3c6d3999145ada934d37d773",
+            "cmake_args": "-DCATCH_BUILD_TESTING=OFF -DCATCH_INSTALL_DOCS=OFF"
+        },
+        {
+            "name": "ZLIB",
+            "url": "https://github.com/luxonis/zlib/archive/refs/tags/v1.2.11-p2.tar.gz",
+            "sha1sum": "fb8b6486183b13a86040f793a939b128f6d27095"
+        }
+    ]
+}
