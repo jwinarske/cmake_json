@@ -238,6 +238,13 @@ while(NOT DEP_ERROR)
     string(JSON DEP_NAME
        GET ${JSON_DEP} "name")
 
+    string(TOUPPER ${DEP_NAME} DEP_NAME_UPPER)
+    if (DEFINED PROJECT_ENABLE_${DEP_NAME_UPPER})
+        if (NOT PROJECT_ENABLE_${DEP_NAME_UPPER})
+            continue()
+        endif ()
+    endif ()
+
     string(JSON DEP_URL
         GET ${JSON_DEP} "url")
 
