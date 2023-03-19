@@ -1,0 +1,26 @@
+From d1b3164717d5fc71e4f1f861a84147f20a71591b Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Sun, 19 Mar 2023 11:35:52 -0700
+Subject: [PATCH 2/2] fix %Lu warnings
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ bzip2recover.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bzip2recover.c b/bzip2recover.c
+index a8131e0..136c72a 100644
+--- a/bzip2recover.c
++++ b/bzip2recover.c
+@@ -37,7 +37,7 @@
+ */
+ #ifdef __GNUC__
+    typedef  unsigned long long int  MaybeUInt64;
+-#  define MaybeUInt64_FMT "%Lu"
++#  define MaybeUInt64_FMT "%llu"
+ #else
+ #ifdef _MSC_VER
+    typedef  unsigned __int64  MaybeUInt64;
+-- 
+2.38.1
+

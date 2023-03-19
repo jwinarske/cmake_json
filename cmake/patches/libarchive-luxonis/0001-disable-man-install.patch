@@ -1,0 +1,35 @@
+From 262ff85fa919630f23b1915b9e951449b453c8a5 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Sun, 19 Mar 2023 11:00:31 -0700
+Subject: [PATCH 1/2] disable man install
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5becd2e..e634dc9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -335,7 +335,7 @@ ENDMACRO (GENERATE_LIST_H)
+ MACRO (INSTALL_MAN __mans)
+   FOREACH (_man ${ARGV})
+     STRING(REGEX REPLACE "^.+[.]([1-9])" "\\1" _mansect ${_man})
+-    INSTALL(FILES ${_man} DESTINATION "share/man/man${_mansect}")
++    # INSTALL(FILES ${_man} DESTINATION "share/man/man${_mansect}")
+   ENDFOREACH (_man)
+ ENDMACRO (INSTALL_MAN __mans)
+ #
+@@ -2029,7 +2029,7 @@ IF(0)
+             FILES_MATCHING PATTERN "*.pdf"
+     )
+   ENDIF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/doc/pdf)
+-ENDIF(WIN32 AND NOT CYGWIN)
++ENDIF()
+ #
+ #
+ #
+-- 
+2.38.1
+

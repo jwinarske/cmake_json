@@ -1,0 +1,26 @@
+From 5ada9c466a761dc1c2267dfda8f11b2fc27eb1f6 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Sun, 19 Mar 2023 11:39:22 -0700
+Subject: [PATCH] Fix source extension warning
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 28887ca..e2d544a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -118,7 +118,7 @@ endif(NOT WIN32)
+ if (BUILD_TESTING)
+     enable_testing()
+ 
+-    add_executable(spew spewG)
++    add_executable(spew spewG.c)
+ 
+ add_test(NAME compress_block_size_1
+     COMMAND ${CMAKE_COMMAND}
+-- 
+2.38.1
+

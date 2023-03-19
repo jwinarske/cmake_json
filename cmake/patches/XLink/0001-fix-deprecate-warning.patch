@@ -1,0 +1,26 @@
+From 033b9951e59dcc1368c62aa62c047b8f76cca999 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Sun, 19 Mar 2023 11:08:03 -0700
+Subject: [PATCH] fix deprecate warning
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ src/pc/protocols/usb_host.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/pc/protocols/usb_host.cpp b/src/pc/protocols/usb_host.cpp
+index 89a253b..c06ef4e 100644
+--- a/src/pc/protocols/usb_host.cpp
++++ b/src/pc/protocols/usb_host.cpp
+@@ -440,7 +440,7 @@ libusb_error getLibusbDeviceMxId(XLinkDeviceState_t state, std::string devicePat
+ 
+                 // Convert to HEX presentation and store into mx_id
+                 for (int i = 0; i < expectedMxIdReadSize; i++) {
+-                    sprintf(mxId + 2*i, "%02X", rbuf[i]);
++                    snprintf(mxId + 2*i, XLINK_MAX_MX_ID_SIZE, "%02X", rbuf[i]);
+                 }
+ 
+                 // Indicate no error
+-- 
+2.38.1
+

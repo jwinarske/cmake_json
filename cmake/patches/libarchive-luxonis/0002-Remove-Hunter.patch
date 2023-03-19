@@ -1,0 +1,85 @@
+From bdf2ae101ef27be465c447fd799edd67a8b92651 Mon Sep 17 00:00:00 2001
+From: Joel Winarske <joel.winarske@gmail.com>
+Date: Sun, 19 Mar 2023 11:01:14 -0700
+Subject: [PATCH 2/2] Remove Hunter
+
+Signed-off-by: Joel Winarske <joel.winarske@gmail.com>
+---
+ CMakeLists.txt | 12 ------------
+ 1 file changed, 12 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e634dc9..65d2dba 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,11 +2,6 @@
+ # Minimum version required for Hunter package manager
+ CMAKE_MINIMUM_REQUIRED(VERSION 3.2 FATAL_ERROR)
+ #
+-include("build/cmake/HunterGate.cmake")
+-HunterGate(
+-    URL "https://github.com/cpp-pm/hunter/archive/v0.23.256.tar.gz"
+-    SHA1 "e9b8328133fc0643d5f921fec81f2c0808c98419"
+-)
+ #
+ PROJECT(libarchive C)
+ #
+@@ -408,7 +403,6 @@ SET(ADDITIONAL_LIBS "")
+ # Find ZLIB
+ #
+ IF(ENABLE_ZLIB)
+-  hunter_add_package(ZLIB)
+   find_package(ZLIB CONFIG REQUIRED)
+ ELSE()
+   SET(ZLIB_FOUND FALSE) # Override cached value
+@@ -447,7 +441,6 @@ MARK_AS_ADVANCED(CLEAR ZLIB_LIBRARY)
+ # Find BZip2
+ #
+ IF(ENABLE_BZip2)
+-  hunter_add_package(BZip2)
+   find_package(BZip2 CONFIG REQUIRED)
+ ELSE()
+   SET(BZip2_FOUND FALSE) # Override cached value
+@@ -476,7 +469,6 @@ MARK_AS_ADVANCED(CLEAR BZIP2_LIBRARIES)
+ # Find LZMA
+ #
+ IF(ENABLE_LZMA)
+-  hunter_add_package(lzma)
+   find_package(lzma CONFIG REQUIRED)
+ ELSE()
+   SET(lzma_FOUND FALSE) # Override cached value
+@@ -569,7 +561,6 @@ ENDIF(LIBB2_FOUND)
+ # Find LZ4
+ #
+ IF(ENABLE_LZ4)
+-  hunter_add_package(lz4)
+   find_package(lz4 CONFIG REQUIRED)
+ ELSE(ENABLE_LZ4)
+   SET(lz4_FOUND FALSE) # Override cached value
+@@ -593,7 +584,6 @@ MARK_AS_ADVANCED(CLEAR LZ4_LIBRARY)
+ # Find Zstd
+ #
+ IF(ENABLE_ZSTD)
+-  hunter_add_package(zstd)
+   find_package(zstd CONFIG REQUIRED)
+ ELSE(ENABLE_ZSTD)
+   SET(zstd_FOUND FALSE) # Override cached value
+@@ -1131,7 +1121,6 @@ ENDIF(ENABLE_ICONV)
+ # Find Libxml2
+ #
+ IF(ENABLE_LIBXML2)
+-  hunter_add_package(libxml2)
+   find_package(libxml2 CONFIG REQUIRED)
+ ELSE()
+   SET(libxml2_FOUND FALSE)
+@@ -1160,7 +1149,6 @@ ELSE(libxml2_FOUND)
+   # Find Expat
+   #
+   IF(ENABLE_EXPAT)
+-    hunter_add_package(Expat)
+     find_package(expat CONFIG REQUIRED)
+   ELSE()
+     SET(EXPAT_FOUND FALSE)
+-- 
+2.38.1
+

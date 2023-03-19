@@ -264,6 +264,25 @@ while(NOT DEP_ERROR)
         message(STATUS "cmake_args ............. ${DEP_CMAKE_ARGS_SEP}")
     endif()
 
+    unset(DEP_PATCHES)
+    unset(DEP_PATCHES_SEP)
+    unset(DEP_PATCHES_ERR)
+    unset(DEP_PATCH_COMMAND)
+    string(JSON DEP_PATCHES
+            ERROR_VARIABLE DEP_PATCHES_ERR
+            GET ${JSON_DEP} "patches")
+    if(${DEP_PATCHES} STREQUAL "patches-NOTFOUND")
+        unset(DEP_PATCHES)
+    else()
+        string(REPLACE " " ";" DEP_PATCHES_LIST ${DEP_PATCHES})
+        message(STATUS "patches ................ ${DEP_PATCHES_LIST}")
+        set(DEP_PATCH_COMMAND git init && git add .)
+        foreach(PATCH IN LISTS DEP_PATCHES_LIST)
+            set(DEP_PATCH_COMMAND ${DEP_PATCH_COMMAND} &&
+                    git apply ${PROJECT_ROOT}/cmake/patches/${DEP_NAME}/${PATCH})
+        endforeach()
+    endif()
+
     unset(DEP_DEPS)
     unset(DEP_DEPS_ERR)
     string(JSON DEP_DEPS 
@@ -281,6 +300,7 @@ while(NOT DEP_ERROR)
     ExternalProject_Add(${DEP_NAME}
         URL ${DEP_URL}
         URL_HASH SHA1=${DEP_SHA1SUM}
+        PATCH_COMMAND ${DEP_PATCH_COMMAND}
         CMAKE_ARGS
             -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
             -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
