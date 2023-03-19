@@ -235,8 +235,7 @@ while(NOT DEP_ERROR)
     endif()
     math(EXPR DEP_INDEX "${DEP_INDEX}+1")
 
-    string(JSON DEP_NAME
-       GET ${JSON_DEP} "name")
+    string(JSON DEP_NAME GET ${JSON_DEP} "name")
 
     string(TOUPPER ${DEP_NAME} DEP_NAME_UPPER)
     if (DEFINED PROJECT_ENABLE_${DEP_NAME_UPPER})
@@ -245,11 +244,9 @@ while(NOT DEP_ERROR)
         endif ()
     endif ()
 
-    string(JSON DEP_URL
-        GET ${JSON_DEP} "url")
+    string(JSON DEP_URL GET ${JSON_DEP} "url")
 
-    string(JSON DEP_SHA1SUM
-        GET ${JSON_DEP} "sha1sum")
+    string(JSON DEP_SHA1SUM GET ${JSON_DEP} "sha1sum")
 
     message(STATUS "name ................... ${DEP_NAME}")
     message(STATUS "url .................... ${DEP_URL}")
@@ -312,6 +309,7 @@ while(NOT DEP_ERROR)
             -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
             -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
             -DCMAKE_VERBOSE_MAKEFILE=${CMAKE_VERBOSE_MAKEFILE}
+            -DCMAKE_POSITION_INDEPENDENT=${CMAKE_POSITION_INDEPENDENT}
             -DCMAKE_STAGING_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/staging/usr
             -DANDROID_NATIVE_API_LEVEL=${ANDROID_NATIVE_API_LEVEL}
             -DCMAKE_ANDROID_ARCH_ABI=${CMAKE_ANDROID_ARCH_ABI}
